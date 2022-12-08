@@ -1,0 +1,324 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Debut css navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background: #fafafa;
+  box-shadow: inset 0px -1px 0px #c5c5c6;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-icon span {
+  font-family: Roboto Flex, sans-serif;
+  font-size: 25px;
+  margin-left: 10px;
+  font-weight: 400;
+  color: #333;
+}
+.nav-icon img {
+  width: 40px;
+  transform: rotate(-17deg) translateX(5px);
+}
+.hamburger {
+  display: none;
+}
+.navlinks-container a {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #414141;
+  display: inline-block;
+  position: relative;
+}
+.navlinks-container a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #333;
+  transition: transform 0.3s ease-out;
+}
+
+.navlinks-container a:hover::after {
+  transform: scaleX(1)
+}
+
+.nav-authentication {
+  margin-left: auto;
+}
+.btns {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.btns a {
+  text-decoration: none;
+  list-style: none;
+  color: rgb(49, 49, 49);
+  background:#efefef;
+  font-family: Roboto Flex, sans-serif;
+  font-size: 16px;
+  min-width: 90px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px; 
+}
+
+.btns a:nth-child(2) {
+  background: #92c3eeb7;
+  padding: 10px 35px;
+}
+
+.sign-user {
+  display: none;
+}
+
+/* Debut code pour le responsive */
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .nav-icon {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .nav-icon span {
+    font-size: 22px;
+  }
+
+  .main-navlinks {
+    order: 1;
+  }
+  /* Debut code Hamburger (span) */
+  .hamburger {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    background: #fafafa;
+    align-items: center;
+    position: relative;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s 0.15s ease-out;
+  }
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(3) {
+    transition: transform 0.3s ease-out;
+  }
+  .hamburger span:nth-child(1) {
+    transform: translateY(7px);
+  }
+  .hamburger span:nth-child(3) {
+    transform: translateY(-7px);
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translate(0) rotate(135deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translate(0) rotate(-135deg);
+  }
+
+  /* Fin code Hamburger */
+
+  .navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: #fafafa;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    padding: 15px 50px 15px 20px;
+    border-right: 1px solid #c5c5c6;
+    transform: translate(-100%);
+  }
+  .open {
+    transform: translate(0%);
+  }
+  .navlinks-container a {
+    font-size: 18px;
+    margin: 10px 0
+  }
+
+  .nav-authentication {
+    order: 3;
+    margin-left: 0;
+  }
+  .btns {
+    display: none;
+  }
+  .sign-user {
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+  .sign-user img {
+    width: 20px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .nav-icon img {
+    width: 30px;
+  }
+  .nav-icon span {
+    font-size: 20px;
+  }
+}
+/* Fin code pour la responsive */
+/* fin code css navbar */
+
+/* Debut code css home */
+.presentation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 740px;
+  width:100% ;
+  padding: 100px 50px;
+  background: #dededf;
+}
+
+.coms1, .coms2 {
+  color: rgb(0, 255, 55);
+  background: #414141;
+  padding: 3px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.presentation h1 {
+  padding: 5px;
+  margin: 45px;
+}
+
+.swipe {
+  height: 120px;
+  margin-top: 30px;
+}
+/* Fin de code css home */
+
+/* Debut de code pour My skills */
+
+#myskills {
+  height: 740px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+}
+/* Debut logo notif ios my skills */
+.citation p {
+  border: 1px inherit black;
+  border-radius: 15px;
+  height: 170px;
+  width: 290px;
+  padding: 20px;
+  margin-top: -100px;
+  background-color: #dededf;
+  text-align: center;
+  overflow:hidden ;
+}
+
+.titre {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.cita {
+  font-size: 12px;
+}
+
+.okay {
+  border-top: 1px solid #c5c5c6;
+  color: #0073ffb7;
+  font-weight: 500;
+}
+/* Fin logo notif ios my skills */
+
+.skills {
+  margin-top: 100px;
+
+}
+.skills img {
+  height: 120px;
+  width: 100px;
+  padding: 5px;
+  margin: 0 30px ;
+}
+
+#careers {
+  height: 655px;
+  background: #c5c5c6;
+  display: flex;
+
+}
+
+.parcours {
+  border: 1px solid black;
+}
+
+.stage {
+  border: 1px solid black;
+}
+
+/* Fin css Careers */
+
+/* Debut css Projects */
+
+#projects {
+  height: 100%;
+}
+
+
+
+
+footer {
+  border: 1px solid black;
+}
