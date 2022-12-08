@@ -213,14 +213,42 @@ nav {
 /* fin code css navbar */
 
 /* Debut code css home */
+.home {
+  display: flex;
+  height: 740px;
+  /* background: #dededf; */
+  background-image: linear-gradient(#FFA384, #74BDCB);
+}
+
 .presentation{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 740px;
-  width:100% ;
-  padding: 100px 50px;
-  background: #dededf;
+  justify-content: center;
+  width:50% ;
+}
+
+.nom {
+  font-size: 30px;
+  padding: 5px;
+  margin-top: -50px ;
+  margin-bottom: 50px;
+}
+.description {
+  padding: 5px;
+  margin: 10px;
+  width: 600px;
+  text-align: center;
+  
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  
+  
 }
 
 .coms1, .coms2 {
@@ -229,11 +257,6 @@ nav {
   padding: 3px;
   margin: 5px;
   border-radius: 5px;
-}
-
-.presentation h1 {
-  padding: 5px;
-  margin: 45px;
 }
 
 .swipe {
@@ -292,23 +315,92 @@ nav {
   padding: 5px;
   margin: 0 30px ;
 }
+/* Debut css Careers */
 
 #careers {
-  height: 655px;
-  background: #c5c5c6;
+  height: 700px;
+  background-image: linear-gradient(#74BDCB, #FFA384);
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 
 }
 
 .parcours {
+  height: 500px;
+  width: 550px;
+  padding: 10px;
+  margin: 10px;
+}
+.college, .lycee, .universite {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px inset #c5c5c6;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px;
+  padding: 5px;
+  margin: 20px 0;
+
+}
+.stage {
+  height: 350px;
+  width: 550px;
+  padding: 10px;
+  margin: 10px;
+}
+.stage1, .stage2 {
+  display: flex;
+  align-items: center;
   border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px;
+  background-color: white;
+  padding: 5px;
+  margin: 20px 0;
+}
+/* Debut Hover PARCOURS SCOLAIRE ET STAGE */
+.stage1:hover,.stage2:hover {
+  transition: 0.5s;
+  -webkit-transform:scale(1.1);
 }
 
-.stage {
-  border: 1px solid black;
+.college:hover, .lycee:hover, .universite:hover {
+  transition: 0.5s;
+  -webkit-transform:scale(1.1); /* Safari and Chrome */
+  /*-moz-transform:scale(); --> Firefox 
+  -ms-transform:scale(); --> IE 9 
+  -o-transform:scale(); --> Opera */
 }
+/* Fin Hover PARCOURS SCOLAIRE ET STAGE */
+
+.logo_diplome img {
+  height: 100px;
+  width: 100px;
+}
+
+.logo_stage img {
+  height: 100px;
+  width: 100px;
+}
+
+.titre_ecole, .titre_stage {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 
 /* Fin css Careers */
+
+
+
+
+
+
+
+
+
 
 /* Debut css Projects */
 
