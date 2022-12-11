@@ -8,18 +8,19 @@
 
 body {
   font-family: Montserrat, Helvetica, sans-serif;
-  background: #f4f4f4;
+  background: white;
 }
 
 /* Debut css navbar */
 nav {
   position: fixed;
   width: 100%;
+  height: 12vh;
   display: flex;
   align-items: center;
   padding: 15px 25px;
-  background: #fafafa;
-  box-shadow: inset 0px -1px 0px #c5c5c6;
+  background: white;
+  box-shadow: inset 0px 1px 4px #c5c5c6;
 }
 
 .nav-icon {
@@ -45,7 +46,7 @@ nav {
 }
 .navlinks-container a {
   margin: 0 10px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   text-decoration: none;
   color: #414141;
@@ -80,18 +81,20 @@ nav {
 .btns a {
   text-decoration: none;
   list-style: none;
-  color: rgb(49, 49, 49);
-  background:#efefef;
+  color: white;
+  background-image: linear-gradient(#dd42df, #fb68bd);
   font-family: Roboto Flex, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   min-width: 90px;
   padding: 10px 15px;
   margin: 0 5px;
-  border-radius: 5px; 
+  border-radius: 50px; 
+  text-align: center;
 }
 
 .btns a:nth-child(2) {
-  background: #92c3eeb7;
+  background: #6eedfb;
+  /* background-image: linear-gradient(#6eedfb, #41fcd3); */
   padding: 10px 35px;
 }
 
@@ -217,7 +220,9 @@ nav {
   display: flex;
   height: 740px;
   /* background: #dededf; */
-  background-image: linear-gradient(#FFA384, #74BDCB);
+ /*  background-image: url("img/background.jpg");
+  background-position: center;
+  background-size: cover; */
 }
 
 .presentation{
@@ -225,20 +230,21 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width:50% ;
+  width:45% ;
 }
 
 .nom {
+  color: black;
   font-size: 30px;
   padding: 5px;
-  margin-top: -50px ;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .description {
+  color: black;
   padding: 5px;
   margin: 10px;
-  width: 600px;
-  text-align: center;
+  width: 400px;
+  text-align: justify;
   
 }
 
@@ -246,128 +252,152 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  
-  
+  width: 45%;
 }
 
-.coms1, .coms2 {
-  color: rgb(0, 255, 55);
-  background: #414141;
-  padding: 3px;
-  margin: 5px;
-  border-radius: 5px;
+.photo img {
+  height: 500px;
 }
 
-.swipe {
-  height: 120px;
+.img_robot {
+  height: 100px;
   margin-top: 30px;
 }
+
+.div_scroll {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding: 0px;
+  margin-top: 400px;
+}
+.button_scroll a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  background-image: linear-gradient(#dd42df, #fb68bd);
+  font-family: Roboto Flex, sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 50px; 
+  text-align: center;
+}
+
 /* Fin de code css home */
 
-/* Debut de code pour My skills */
+/* Debut de code pour competences */
 
-#myskills {
+#competences {
   height: 740px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-
+  background-color: #fafafa;
 }
-/* Debut logo notif ios my skills */
-.citation p {
-  border: 1px inherit black;
-  border-radius: 15px;
-  height: 170px;
-  width: 290px;
+/* Debut bulle competences */
+.bloc_citation {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 300px;
+}
+
+.bulle_competences {
+  border-radius: 20px;
+  height: 200px;
+  width: 350px;
   padding: 20px;
-  margin-top: -100px;
-  background-color: #dededf;
+  background-image: linear-gradient(#dd42df, #fb68bd);
   text-align: center;
-  overflow:hidden ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .titre {
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.citation {
+  font-size: 18px;
+}
+/* Fin bulle competences */
+
+.div_logo_competences {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_competences {
+    width: 550px;
+}
+.logo_competences img {
+  height: 110px;
+  width: 100px;
+  padding: 5px;
+  margin: 30px 30px ;
+}
+/* Fin code pour competences */
+
+/* Debut css parcours */
+#parcours {
+  height: 740px;
+  background:white;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.titre_ecole, .titre_stage {
+  color: black;
+  text-align: center;
+  font-weight: 700;
   font-size: 20px;
 }
 
-.cita {
-  font-size: 12px;
-}
-
-.okay {
-  border-top: 1px solid #c5c5c6;
-  color: #0073ffb7;
-  font-weight: 500;
-}
-/* Fin logo notif ios my skills */
-
-.skills {
-  margin-top: 100px;
-
-}
-.skills img {
-  height: 120px;
-  width: 100px;
-  padding: 5px;
-  margin: 0 30px ;
-}
-/* Debut css Careers */
-
-#careers {
-  height: 700px;
-  background-image: linear-gradient(#74BDCB, #FFA384);
+.parcours_scolaire, .stage {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-
+  flex-direction: column;
+  justify-content: center;
+  height: 740px;
+  
 }
 
-.parcours {
-  height: 500px;
-  width: 550px;
-  padding: 10px;
-  margin: 10px;
-}
 .college, .lycee, .universite {
   display: flex;
   align-items: center;
-  background: white;
-  border: 1px inset #c5c5c6;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px;
-  padding: 5px;
-  margin: 20px 0;
+  background-image: linear-gradient(#dd42df, #fb68bd);
+  border: 1px solid rgb(165, 165, 165);
+  border-radius: 50px;
+  padding: 10px;
+  margin: 20px 5px;
 
 }
-.stage {
-  height: 350px;
-  width: 550px;
-  padding: 10px;
-  margin: 10px;
-}
+
 .stage1, .stage2 {
   display: flex;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px;
-  background-color: white;
-  padding: 5px;
-  margin: 20px 0;
+  border: 1px solid rgb(165, 165, 165);
+  border-radius: 50px;
+  background-image: linear-gradient(#047ff1, #07c1d2);
+  padding: 10px;
+  margin: 20px 5px;
 }
+
 /* Debut Hover PARCOURS SCOLAIRE ET STAGE */
 .stage1:hover,.stage2:hover {
   transition: 0.5s;
-  -webkit-transform:scale(1.1);
+  -webkit-transform:scale(1.05);
 }
 
 .college:hover, .lycee:hover, .universite:hover {
   transition: 0.5s;
-  -webkit-transform:scale(1.1); /* Safari and Chrome */
+  -webkit-transform:scale(1.05); /* Safari and Chrome */
   /*-moz-transform:scale(); --> Firefox 
   -ms-transform:scale(); --> IE 9 
   -o-transform:scale(); --> Opera */
@@ -375,41 +405,95 @@ nav {
 /* Fin Hover PARCOURS SCOLAIRE ET STAGE */
 
 .logo_diplome img {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  margin: 10px;
 }
 
 .logo_stage img {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 50px;
+}
+/* Fin css parcours */
+
+/* Debut css Projets */
+#projets {
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 740px;
+
 }
 
-.titre_ecole, .titre_stage {
+.projet_stage, .festival, .parking, .portfolio {
+  border-radius: 10px;
+  background-image: linear-gradient(#dd42df, #fb68bd);
+  width: 500px;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+}
+.projet_stage p, .festival p, .parking p, .portfolio p {
   text-align: center;
-  font-weight: 700;
   font-size: 20px;
-}
-
-
-/* Fin css Careers */
-
-
-
-
-
-
-
-
-
-
-/* Debut css Projects */
-
-#projects {
-  height: 100%;
+  color: white;
+  font-weight: 600;
 }
 
 
 
+.projet_stage:hover, .festival:hover, .parking:hover, .portfolio:hover {
+  transition: 0.5s;
+  -webkit-transform:scale(1.05);
+  border: 1px solid black;
+  box-shadow: 1px 1px 15px gray;
+
+}
+/* Fin css projets */
+
+/* Debut css veille it */
+#veille {
+  height: 740px;
+}
+
+.titre_veille {
+  text-align: center;
+}
+
+
+/* Fin css veille it */
+
+/* Debut css contact */
+#contact {
+  height: ;: 740px;
+  background: #fafafa;
+  display: flex;
+}
+
+.coordonnee {
+  border:1px solid black;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.robot_contact {
+  border:1px solid black;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.robot_contact img {
+  height: 500px;
+}
+
+
+/* Fin css contact */
 
 footer {
   border: 1px solid black;
