@@ -291,18 +291,17 @@ nav {
 #competences {
   height: 740px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #fafafa;
 }
 /* Debut bulle competences */
 .bloc_citation {
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 300px;
+  height: 740px;
 }
 
 .bulle_competences {
@@ -317,9 +316,11 @@ nav {
   justify-content: center;
 }
 
-.titre {
+.titre_competence {
+  color: black;
+  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .citation {
@@ -443,9 +444,88 @@ nav {
   color: white;
   font-weight: 600;
 }
+.projet_stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
+.projet_stage img {
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+}
 
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
+.portfolio img {
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+} 
+/* Debut page projet stage 1 */
+.projet_stage1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  justify-content: center;
+}
+.projet_titre_stage1 {
+  color: white;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.description_stage1{
+  color: white;
+  height: 100px;
+  width: 1000px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+.img_stage1 {
+  display: flex;
+  flex-direction: column;
+}
+.img_stage1 img {
+  height: 500px;
+  width: 700px;
+  margin: 30px;
+  border-radius: 40px;
+}
+.body_stage1 {
+  background-image: linear-gradient(black,white);
+}
+.retourner_page {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 50px 0;
+}
+.button_retour a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  background-image: linear-gradient(#dd42df, #fb68bd);
+  font-family: Roboto Flex, sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 50px; 
+  text-align: center;
+}
+/* Fin page projet stage 1 */
+
+/* Debut hover sur les bulles projets */
 .projet_stage:hover, .festival:hover, .parking:hover, .portfolio:hover {
   transition: 0.5s;
   -webkit-transform:scale(1.05);
@@ -453,6 +533,7 @@ nav {
   box-shadow: 1px 1px 15px gray;
 
 }
+/* Fin hover sur les bulles projets */
 /* Fin css projets */
 
 /* Debut css veille it */
@@ -469,7 +550,7 @@ nav {
 
 /* Debut css contact */
 #contact {
-  height: ;: 740px;
+  height: 740px;
   background: #fafafa;
   display: flex;
 }
