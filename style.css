@@ -424,16 +424,26 @@ nav {
 #projets {
   background: #fafafa;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 740px;
-
 }
-
+.titre_projets {
+  margin-bottom: 100px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.bulles_projets {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
 .projet_stage, .festival, .parking, .portfolio {
   border-radius: 10px;
   background-image: linear-gradient(#dd42df, #fb68bd);
-  width: 500px;
+  width: 100%;
   height: 200px;
   margin: 20px;
   padding: 10px;
@@ -539,11 +549,119 @@ nav {
 /* Debut css veille it */
 #veille {
   height: 740px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
 }
 
 .titre_veille {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin: 40px;
+}
+
+.description_veille {
+  text-align: center;
+  width: 850px;
+  line-height: 25px;
+}
+.question_veille {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 40px;
+}
+.reponse_veille {
+  text-align: center;
+  width: 1050px;
+  line-height: 25px;
+
+}
+.page_veille {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 50px 0;
+}
+.button_veille a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  background-image: linear-gradient(#dd42df, #fb68bd);
+  font-family: Roboto Flex, sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 50px; 
   text-align: center;
 }
+/* Fin css veille it */
+
+/* Debut css Page veille.html */
+.body_veille {
+  background-image: linear-gradient(grey,darkgray);
+}
+.page_detail_veille {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titre_detail_veille {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 40px;
+  margin-top: 150px;
+}
+.definition_var {
+  width: 900px;
+  line-height: 27px;
+  text-align: center;
+}
+.definition_goal-line {
+  text-align: center;
+  width: 900px;
+  line-height: 27px;
+}
+.titre_var, .titre_goal {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px;
+}
+.football {
+  text-align: center;
+  width: 900px;
+  line-height: 27px;
+  margin: 5px 0;
+}
+.lien_youtube {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 50px 0;
+}
+.button_ytb a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  background-image: linear-gradient(#dd42df, #fb68bd);
+  font-family: Roboto Flex, sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 50px; 
+  text-align: center;
+}
+.regie p {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+/* Fin css Page veille.html */
+
 
 
 /* Fin css veille it */
