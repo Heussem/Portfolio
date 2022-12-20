@@ -9,10 +9,12 @@
 body {
   font-family: Montserrat, Helvetica, sans-serif;
   background: white;
+  scroll-behavior: smooth;
 }
 
 /* Debut css navbar */
 nav {
+  z-index: 1;
   position: fixed;
   width: 100%;
   height: 12vh;
@@ -102,117 +104,7 @@ nav {
   display: none;
 }
 
-/* Debut code pour le responsive */
 
-@media (max-width: 1000px) {
-  nav {
-    padding: 15px 20px;
-    position: relative;
-  }
-
-  .nav-icon {
-    order: 2;
-    margin: 0 auto;
-  }
-
-  .nav-icon span {
-    font-size: 22px;
-  }
-
-  .main-navlinks {
-    order: 1;
-  }
-  /* Debut code Hamburger (span) */
-  .hamburger {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    background: #fafafa;
-    align-items: center;
-    position: relative;
-  }
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #333;
-    position: absolute;
-    pointer-events: none;
-    transition: opacity 0.3s 0.15s ease-out;
-  }
-  .hamburger span:nth-child(1),
-  .hamburger span:nth-child(3) {
-    transition: transform 0.3s ease-out;
-  }
-  .hamburger span:nth-child(1) {
-    transform: translateY(7px);
-  }
-  .hamburger span:nth-child(3) {
-    transform: translateY(-7px);
-  }
-  .hamburger.open span:nth-child(1) {
-    transform: translate(0) rotate(135deg);
-  }
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-    transition: opacity 0s ease-out;
-  }
-  .hamburger.open span:nth-child(3) {
-    transform: translate(0) rotate(-135deg);
-  }
-
-  /* Fin code Hamburger */
-
-  .navlinks-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    background: #fafafa;
-    top: 100%;
-    left: 0;
-    height: 100vh;
-    padding: 15px 50px 15px 20px;
-    border-right: 1px solid #c5c5c6;
-    transform: translate(-100%);
-  }
-  .open {
-    transform: translate(0%);
-  }
-  .navlinks-container a {
-    font-size: 18px;
-    margin: 10px 0
-  }
-
-  .nav-authentication {
-    order: 3;
-    margin-left: 0;
-  }
-  .btns {
-    display: none;
-  }
-  .sign-user {
-    display: block;
-    cursor: pointer;
-    border: none;
-  }
-  .sign-user img {
-    width: 20px;
-  }
-
-}
-
-@media (max-width: 500px) {
-  .nav-icon img {
-    width: 30px;
-  }
-  .nav-icon span {
-    font-size: 20px;
-  }
-}
-/* Fin code pour la responsive */
 /* fin code css navbar */
 
 /* Debut code css home */
@@ -393,12 +285,12 @@ nav {
 /* Debut Hover PARCOURS SCOLAIRE ET STAGE */
 .stage1:hover,.stage2:hover {
   transition: 0.5s;
-  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
 }
 
 .college:hover, .lycee:hover, .universite:hover {
   transition: 0.5s;
-  -webkit-transform:scale(1.05); /* Safari and Chrome */
+  transform:scale(1.05); /* Safari and Chrome */
   /*-moz-transform:scale(); --> Firefox 
   -ms-transform:scale(); --> IE 9 
   -o-transform:scale(); --> Opera */
@@ -538,7 +430,7 @@ nav {
 /* Debut hover sur les bulles projets */
 .projet_stage:hover, .festival:hover, .parking:hover, .portfolio:hover {
   transition: 0.5s;
-  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
   border: 1px solid black;
   box-shadow: 1px 1px 15px gray;
 
@@ -553,7 +445,6 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
 }
 
 .titre_veille {
@@ -596,6 +487,10 @@ nav {
   margin: 0 5px;
   border-radius: 50px; 
   text-align: center;
+}
+.button_veille:hover {
+  transition: 0.5s;
+  transform:scale(1.05);
 }
 /* Fin css veille it */
 
@@ -674,14 +569,13 @@ nav {
 }
 
 .coordonnee {
-  border:1px solid black;
   width: 50%;
   display: flex;
   justify-content: center;
+  align-items:center;
 }
 
 .robot_contact {
-  border:1px solid black;
   width: 50%;
   display: flex;
   align-items: center;
@@ -691,9 +585,272 @@ nav {
   height: 500px;
 }
 
+form {
+  color: white;
+  background-image: linear-gradient(45deg,#24e2fc,#123e96);
+  padding: 10px;
+  border-radius: 20px;
+  width: 75%;
+}
 
+form p {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+form .ligne {
+  width: 100%;
+  height: 1px;
+  background-color: #4bfcd5;
+}
+form .body_form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+form .footer_form {
+  margin-top: 40px;
+  text-align: center;
+}
+.boite {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  height: 25px;
+  margin: 5px 0;
+  padding: 5px 5px 5px 30px;
+  padding-left: 30px ;
+  border: 1px solid #141414;
+  outline-color:  #4bfcd5;
+  border-radius: 5px;
+}
+form i {
+  position: absolute;
+  left: 2px;
+  top: 24px;
+  padding: 5px;
+  color: #113f97;
+}
+.form_droite {
+  height: 100%;
+}
+form textarea {
+  height: 174px;
+  margin: 5px 0;
+  padding: 5px 5px 5px 10px;
+  border: 1px solid #141414;
+  outline-color:  #4bfcd5;
+  border-radius: 5px;
+  resize: none;
+}
+form .footer_form button {
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  color: white;
+  background-image: linear-gradient(45deg,#2d03ff, #00b3ff);
+  font-family: Roboto Flex, sans-serif;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 50px; 
+  text-align: center;
+  cursor: pointer;
+}
+
+form .footer_form button:hover {
+  transition: 0.5s;
+  transform:scale(1.05);
+}
 /* Fin css contact */
 
+/* Debut css footer */
+
 footer {
-  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  background-image: linear-gradient(45deg,#24e2fc,#123e96);
 }
+
+.div_footer_texte {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer_texte {
+  width: 500px;
+}
+.footer_texte p {
+  margin: 10px;
+}
+.div_footer_moi {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer_moi {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  padding: 10px;
+  margin: 15px;
+  text-align: justify;
+}
+.footer_moi p {
+  margin: 15px;
+}
+
+.footer_logo {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40px;
+  padding: 3px;
+  background-color: white;
+}
+
+.footer_logo a {
+  color: #0a66c2;
+}
+.footer_logo a i:hover {
+  transform: scale(1.2);
+  color: #dd42df;
+  
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* Fin css footer */
+
+
+
+
+
+/* #################################################################### */
+
+/* Debut code pour le responsive @media */
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .nav-icon {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .nav-icon span {
+    font-size: 22px;
+  }
+
+  .main-navlinks {
+    order: 1;
+  }
+  /* Debut code Hamburger (span) */
+  .hamburger {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    background: #fafafa;
+    align-items: center;
+    position: relative;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s 0.15s ease-out;
+  }
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(3) {
+    transition: transform 0.3s ease-out;
+  }
+  .hamburger span:nth-child(1) {
+    transform: translateY(7px);
+  }
+  .hamburger span:nth-child(3) {
+    transform: translateY(-7px);
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translate(0) rotate(135deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translate(0) rotate(-135deg);
+  }
+
+  /* Fin code Hamburger */
+
+  .navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: #fafafa;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    padding: 15px 50px 15px 20px;
+    border-right: 1px solid #c5c5c6;
+    transform: translate(-100%);
+  }
+  .open {
+    transform: translate(0%);
+  }
+  .navlinks-container a {
+    font-size: 18px;
+    margin: 10px 0
+  }
+
+  .nav-authentication {
+    order: 3;
+    margin-left: 0;
+  }
+  .btns {
+    display: none;
+  }
+  .sign-user {
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+  .sign-user img {
+    width: 20px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .nav-icon img {
+    width: 30px;
+  }
+  .nav-icon span {
+    font-size: 20px;
+  }
+}
+/* Fin code pour la responsive */

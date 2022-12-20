@@ -12,13 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,500;8..144,700;8..144,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
 
   <!-- Debut navbar -->
     <nav>
       <a href="#" class="nav-icon" aria-label="visit homepage" aria-current="page">
-        <img src="img/logo.svg" alt="Logo Rhb">
+        <img src="img/logo.svg" alt="Logo Rbh">
         <span>Portfolio</span>
       </a>
 
@@ -254,20 +255,48 @@
     <div id="contact">
 
       <div class="coordonnee">
-        <p>Me contacter</p>
+        
         <form action="/ma-page-de-traitement" method="post">
-          <div>
-              <label for="name">Nom :</label>
-              <input type="text" id="name" name="user_name">
+
+          <p>Me contacter</p>
+
+          <div class="ligne"></div>
+
+          <div class="body_form">
+
+            <div class="form_gauche">
+
+              <div class="boite">
+                <label>Votre prénom</label>
+                <input type="text">
+                <i class="fa-solid fa-user"></i>
+              </div>
+
+              <div class="boite">
+                <label>Votre adresse e-mail</label>
+                <input type="text">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div class="boite">
+                <label>Votre téléphone</label>
+                <input type="text">
+                <i class="fa-solid fa-mobile-button"></i>
+              </div>
+            </div>
+
+            <div class="form_droite">
+              <div class="boite">
+                <label>Votre Message</label>
+                <textarea placeholder="Ecrivez ici.."></textarea>
+              </div>
+            </div>
           </div>
-          <div>
-              <label for="mail">e-mail&nbsp;:</label>
-              <input type="email" id="mail" name="user_mail">
+
+          <div class="footer_form">
+            <button>Envoyer le Message</button>
           </div>
-          <div>
-              <label for="msg">Message :</label>
-              <textarea id="msg" name="user_message"></textarea>
-          </div>
+
       </form>
       </div>
 
@@ -275,13 +304,54 @@
         <img src="img/Give.svg" alt="robot contact">
       </div>
 
-
     </div>
     <!-- Fin contact -->
 
+    <!-- Debut footer -->
+
     <footer>
-      <p> Copyright Reserved </p>
+      <div class="div_footer_texte">
+
+        <div class="footer_texte">
+          <p><b>UNTITLE</b></p>
+
+          <p>Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Aliquid impedit harum reprehenderit illo 
+            voluptate doloremque assumenda, quidem ipsam architecto dolores
+            vel beatae magnam doloribus necessitatibus in culpa repellendu
+            s nostrum non?
+          </p>
+        </div>
+      </div> 
+      
+      <div class="div_footer_moi">
+        <div class="footer_moi">
+          <div>
+            <p><b>Adresse</b></p>
+            <p><b>Téléphone</b></p>
+            <p><b>E-mail</b></p>
+          </div>
+          
+          <div>
+            <p> 6 rue Patrick le Fourbe Survilliers 95470</p>
+            <p>+33 65131****</p>
+            <p>Houssam.rabehi@hotmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer_logo">
+          <a href="https://www.linkedin.com/in/houssam-rabehi-b20bb7231/"> <i class="fa-brands fa-linkedin fa-2x"></i></a>
+          <a href="#"> <i class="fa-brands fa-square-instagram fa-2x"></i></a>
+          <a href="https://github.com/Heussem"> <i class="fa-brands fa-square-github fa-2x"></i></a>   
+        </div>
+
+      </div>
+     
+
+      <div class="copyright">Copyright © 2022. Tous droits résérvés à Houssam Rabehi.</div>
+
     </footer>
+    <!-- Fin footer -->
 
     <script src="script.js"></script>
   </body>
