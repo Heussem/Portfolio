@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "noto";
+    src: url("/font/NotoSansKR-Regular.otf");
+}
+
+@font-face {
+    font-family: "deli";
+    src: url("/font/DeliciousHandrawn-Regular.ttf");
+}
+
+@font-face {
+    font-family: "poppins-medium";
+    src: url("/font/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "poppins-regular";
+    src: url("/font/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "poppins-bold";
+    src: url("/font/Poppins-Bold.ttf");
+}
